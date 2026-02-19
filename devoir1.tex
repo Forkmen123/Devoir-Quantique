@@ -1,0 +1,230 @@
+\documentclass[11pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{float}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\geometry{margin=1in}
+
+\tcbset{
+    tommy/.style={
+        colback=gray!10,
+        colframe=black,
+        boxsep=1mm,    
+        arc=1mm        
+    }
+}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \includegraphics[width=4cm]{Logo_Ulaval.jpg}\\
+    {\large Département de physique, de génie physique et d'optique\\[4cm]}
+    {\LARGE\bfseries Devoir 1 Physique Quantique\\[3cm]}
+    {\large Travail remis à\\[0.3cm]
+    Frederic Grillot \\[2cm]}
+    {\large Par\\[0.3cm]
+    Tommy Roy\\
+    Guillaume Perron\\
+    Anakin Schroeder Tabah\\[3cm]}
+    {\large Cours: PHY-1006\\[0.2cm]
+    Date de remise: 12 Février 2026}
+    \vfill
+\end{titlepage}
+
+\section*{Question A}
+On considère un corps noir à une température de 6000 K. 
+
+\paragraph*{a)}
+Avec la loi de Wien, calculez la fréquence $\nu_{max}$ à laquelle la densité d’énergie $\rho_T (\nu)$ est maximale. 
+\\\\
+Pour ce faire, nous pouvons simplement utiliser la loi de Wien dans laquelle nous insérons notre température, car $\nu$ est maximale lorsque $\rho_T (\nu)$ est maximale :
+
+\begin{align*}
+    \nu_{max} & =\frac{2.821k_B}{h}T
+    \\  \implies 
+    \nu_{max} & =\frac{2.821 \cdot (\num{1.3806e-23})}{\num{6.626e34}} \cdot 6000
+    \\ \implies\nu_{max}&= \num{3.5267e14}\\
+\end{align*}
+
+\begin{tcolorbox}[tommy]
+    Donc, la fréquence maximale est de $\num{3.5267e14}\,$Hz
+\end{tcolorbox} 
+\vspace{0.2cm}
+
+\paragraph*{b)} À cette fréquence, calculez le rapport entre la densité d’énergie $\rho_T (\nu_{max})$ prédite correctement par la loi de Planck, et celle prédite (incorrectement) par la loi de Rayleigh–Jeans.\\
+
+Pour ce faire, nous devons diviser la loi de Planck par celle de
+Rayleigh-Jeans, ce qui nous donne l'équation réduite suivante :
+
+\begin{align*}
+    \frac{\rho_{T_{Planck}}(\nu _{max})}{\rho_{T_{Rayleigh-Jeans}}(\nu _{max})} & = \frac{\frac{8\pi h\nu ^3}{c^3}\frac{1}{e^{\frac{h\nu}{kT}}-1}}{\frac{8\pi kT\nu ^2}{c^3}} = \frac{\nu h}{kT(e^{\frac{h\nu}{kT}}-1)} = \frac{2.821}{(e^{\frac{h\nu}{kT}}-1)} \\
+\end{align*}
+Nous avons pu simplifier $\frac{h \nu}{kT} $ par $2.821$ grâce à la loi de Wien, nous pouvons donc maintenant trouver le rapport de manière plus simple :
+\begin{align*}
+    \frac{2.821}{e^{\frac{\num{6.626e-34}\ \cdot\  \num{3.5267e14}}{\num{1.3806e-23}\ \cdot \ 6000}}-1} = 0.1786\\
+\end{align*}
+
+\begin{tcolorbox}[tommy]
+    Donc le rapport entre les deux lois est de 0,01786
+\end{tcolorbox}
+\newpage
+
+
+\paragraph*{c)}
+Recalculez le même rapport, mais à la fréquence $\nu$ = 5 × $\nu_{max}$. 
+\\\\
+Nous pouvons reprendre la formule précédente mais en multipliant par $5$ la fréquence maximale et le facteur de la loi de Wien ce qui nous donne :
+
+\begin{align*}
+    \frac{5 \cdot 2.821}{e^{\frac{\num{6.626e-34}\ \cdot \ 5 \  \cdot \ \num{3.5267e14}}{\num{1.3806e-23} \ \cdot \  6000}}-1} = \num{1.0560e-5}\\
+\end{align*}
+
+\begin{tcolorbox}[tommy]
+    Donc, le rapport avec une fréquence $5$ fois plus grande que la fréquence maximale est de $\num{1.0560e-5}$.
+\end{tcolorbox}
+\vspace{1cm}
+
+\section*{Question B}
+
+Un objet métallique chauffé au rouge émet du rayonnement comme un corps noir. L’émission maximale se produit à une longueur d’onde $\lambda_{\text{max}} = 660\,$nm (lumière rouge). On augmente la température jusqu’à ce que l’émission
+maximale se fasse à une longueur d’onde de $220\,$nm. Par quel facteur l’énergie émise par unité de temps va-t-elle augmenter ?
+\\
+\begin{tcolorbox}[tommy]
+    Avec la loi de Wien $T=\frac{b}{\lambda_\text{max}}$ on peut calculer la température à chaque longueur d'onde maximale. Avec
+    $\lambda=660\,$nm, T$_\text{max}$ est de $\num{4391}\,$K et pour $\lambda=220\,$nm de
+    $\num{13168}\,$K. Ensuite on peut prendre la loi de Stefan-Boltzmann $(P=\sigma A T^4)$ pour trouver le rapport de puissance. La puissance à $660\,$nm est de $\num{2.1078e7}\,$W et de $\num{1.7048e7}\,$W à $220\,$nm. Le facteur entre les deux est donc de 81.
+\end{tcolorbox}
+\vspace{1cm}
+
+\section*{Question C}
+
+Une sphère de cuivre de rayon R à la température $T = 500$ K, un cube
+d’aluminium de dimension $R\times R \times R$ à la température $T = 800$ K, et
+un cylindre de nickel de longueur $2R$ et de diamètre R à la température T =
+700 K émettent comme des corps noirs. Classez ces objets en ordre, de celui qui
+émet le plus d’énergie par seconde à celui qui en émet le moins. 
+\newpage
+Pour ce faire, il suffit d'utiliser la loi de Stefan : $P = \sigma A T^{4}$
+\\\\
+
+Pour la sphère : \\
+
+\begin{align*}
+    A_s & = 4 \pi R^2
+\end{align*}
+
+\begin{align*}
+    P          & = \sigma A_s T_s^{4}             \\
+    \implies P & = \sigma 4 \pi R^2  \times 500^4 \\
+    \implies P & \approx \num{7.85e11} \sigma R^2
+\end{align*}
+
+Pour le cube : \\
+
+\begin{align*}
+    A_{ca} & = 6 R^2
+\end{align*}
+
+\begin{align*}
+    P          & = \sigma A_{cu} T_{cu}^{4}  \\
+    \implies P & = \sigma 6 R^2 \times 800^4 \\
+    \implies P & = \num{2.457e12} \sigma R^2
+\end{align*}
+
+Pour le cylindre : \\
+
+\begin{align*}
+    A_{cy} & = 2.5\pi R^2
+\end{align*}
+
+\begin{align*}
+    P          & = \sigma  A_{cy}T_{cy}^{4}         \\
+    \implies P & = \sigma (2.5\pi R^2) \times 700^4 \\
+    \implies P & \approx \num{1.8e12}  \sigma R^2   \\
+\end{align*}
+
+\begin{tcolorbox}[tommy]
+    Ainsi, si on compare la puissance émise par les trois corps, on trouve qu'on peut les classer en ordre croissant :
+
+    \begin{align*}
+        \text{Sphère < cylindre < cube} \\
+    \end{align*}
+
+\end{tcolorbox}
+
+\section*{Question D}
+À l’intérieur d’une cible de sodium, l’énergie de liaison des électrons est de 2.3 eV
+
+\paragraph*{a)}
+Observe-t-on un effet photoélectrique lorsqu’on éclaire cette cible avec de la lumière jaune
+(longueur d’onde $\lambda $ = 589 nm) ?\\
+
+Pour observer un effet photoélectrique, il faut que l'énergie du photon soit
+plus grande que l'énergie de liaison des électrons. Il faut donc que la
+fréquence soit plus grande que $\frac{w_o}{h}$, donc
+\begin{align*}
+    \\ \nu & \ge \frac{w_o}{h}
+    \\\implies 
+    \frac{c}{\lambda} & \ge \frac{w_o}{h}
+    \\\implies 
+    \frac{c}{\num{5.89e-7}} & \ge \frac{2,3 \cdot \num{1.6022e-19}}{\num{6.626e-34}}
+    \\\implies \num{5.0898e14}&\ge \num{5.5615e14}\\
+\end{align*}
+
+\begin{tcolorbox}
+    Donc comme l'inégalité n'est pas vraie, nous n'observerons pas d'effet photoélectrique avec une lumière d'une longueur d'onde de 589nm sur une cible de sodium.
+\end{tcolorbox}
+\vspace{0.2cm}
+
+
+
+\paragraph*{b)}
+Quelle est la fréquence de coupure de l’effet photoélectrique pour le sodium, et quelle est
+la longueur d’onde correspondante ? \\
+
+Pour ce faire, nous pouvons calculer la fréquence de coupure à l'aide de
+l'équation suivante :\\
+\begin{align*}
+    \nu_c & = \frac{w_o}{h}
+    \\   \nu_c & =\frac{2.3 \cdot \num{1.6022e-19}}{\num{6.626e-34}}
+    \\  \nu_c & = \num{5.5615e14}
+    \\ \lambda_c & = \frac{c}{\nu_c}
+    \\ \lambda_c & = \frac{c}{\num{5.5615e14}} 
+    \\ \lambda_c &= \num{5.3904e-7} \\
+\end{align*}
+
+\begin{tcolorbox}[tommy]
+    Donc la fréquence de coupure est de $\num{5.5615e14}\,$Hz et la longueur d'onde correspondante est de $539.04\,$nm 
+\end{tcolorbox}
+
+\newpage
+
+\paragraph*{c)}
+Quelle longueur d’onde devrait-on utiliser pour que les électrons éjectés aient une énergie
+cinétique égale à $3$ fois leur énergie de liaison ?\\
+
+Nous pouvons calculer la longueur d'onde de la manière suivante :\\
+\begin{align*}
+    E_K & = h\nu - W
+    \\ \implies 3 W + W & = \frac{hc}{\lambda}
+    \\ \implies \lambda & = \frac{hc}{4W}
+    \\ \implies \lambda & = \frac{hc}{4 \cdot 2.3 \cdot \num{1.6022e-19}}
+    \\ \implies \lambda &= \num{1.3476e-7} \,\text{nm}\\
+\end{align*}
+
+\begin{tcolorbox}[tommy]
+    Donc, il faudrait une longueur d'onde de $134.76\,$nm pour que l'énergie cinétique soit le triple de celle de liaison.
+\end{tcolorbox}
+
+\end{document}
