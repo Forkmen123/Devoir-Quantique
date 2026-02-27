@@ -42,10 +42,58 @@
     \vfill
 \end{titlepage}
 
-\paragraph*{Question A}
+\section*{Question A} À l’aide d’un microscope, on veut examiner la structure interne d’un atome. Comme les
+atomes ont une taille caractéristique de 1 Å, on veut une résolution d’au moins 0.1 Å. On sait
+également que ce qui détermine la résolution d’un microscope est la longueur d’onde qu’il
+utilise.
 
+\paragraph*{a)}
+Si on utilise un microscope optique, quelle doit être l’énergie des photons pour avoir une
+résolution suffisante ? À quel type de lumière cela correspond-il ?
+\\\\    
+Pour répondre à cette question, nous pouvons simplement utiliser l'équation suivante de l'énergie d'un photon : 
 
-\paragraph*{Question B}
+\begin{center}
+    $E = \frac{hc}{\lambda}$
+\end{center}
+
+Où "h" est la constante de Planck ($6,626*10^{-34}$Js), "c" est la constante de la vitesse de la lumière et "$\lambda$" est la longueur d'onde. Comme nous voulons une résolution de 0,1 \AA, nous devons utiliser ce nombre comme longueur d'onde. Avec ces données nous pouvons effectuer le calcul de l'énergie, ce qui nous donne : 
+\begin{align*}
+    E &= \frac{6,626*10^{-34}Js * 2,9979*10^{8}\frac{m}{s}}{1*10^{-11}m} = 1,9864*10^{-14}J
+\end{align*}
+\begin{tcolorbox}[tommy]
+Donc l'énergie qu'il faudrait à un photon pour résoudre notre image à la résolution voulue est de $1,9864*10^{-14}$J
+\end{tcolorbox}
+
+\paragraph*{b)}
+Si on utilise un microscope électronique, quelle doit être l’énergie des électrons pour avoir
+une résolution suffisante ?
+\\\\
+Pour résoudre cette image, nous devons utiliser la propriété ondulatoire des électrons avec la longueur d'onde de de Broglie qui va correspondre à notre longueur d'onde de 0,1 \AA. Cela va nous permettre d'obtenir la quantité de mouvement de notre électron et par la suite d'obtenir l'énergie de l'électron. Nous pouvons faire les calculs suivants pour obtenir la quantités de mouvement : 
+\begin{align*}
+    \lambda &= \frac{h}{p}
+  \\  p &= \frac{h}{\lambda}
+  \\ p &= \frac{6,626*10^{-34}Js}{1*10^{-11}m} = 6,626*10^{-23}Ns
+\end{align*}
+
+Avec ce résultat, nous pouvons obtenir l'énergie de l'électron à l'aide de la formule suivante : 
+
+\begin{align*}
+    E^2 &= p^2c^2 + m_e^2c^4
+\\    E &= \sqrt{p^2c^2 + m_e^2c^4}
+\\ E&=\sqrt{(6,626*10^{-23}Ns)^2(2,9979*10^{8}\frac{m}{s})^2 + (9,10938*10^{-31}kg)^2(2,9979*10^{8}\frac{m}{s})^4}
+\\E &= 7,097*10^{-27} J
+\end{align*}
+\begin{tcolorbox}[tommy]
+Donc l'énergie de l'électron est de $7,097*10^{-27}$ J.
+\end{tcolorbox}
+\paragraph*{c)}
+Lequel des deux choix est le plus pratique, et pourquoi ?
+\begin{tcolorbox}[tommy]
+Le choix le plus pratique serai le photon car il demande beaucoup moins d'énergie que l'électron.
+\end{tcolorbox}
+
+\section*{Question B}
 Voici les informations que nous avons :
 \begin{align*}
     E &= 5.9 \text{ MeV}  \\
@@ -90,7 +138,7 @@ Maintenant, calculons la probabilité $P$.
 
 \vspace{1cm}
 
-\paragraph*{Question C} Un électron et un positron relativistes se rencontrent pour s'annihiler et produire deux photons. Montrez qu’il existe une relation entre la longueur d’onde de de Broglie $\lambda_e$ de l’electron
+\section*{Question C} Un électron et un positron relativistes se rencontrent pour s'annihiler et produire deux photons. Montrez qu’il existe une relation entre la longueur d’onde de de Broglie $\lambda_e$ de l’electron
 et du positron, la longueur d'onde $\lambda_\gamma$ des photons et la longueur d'onde de Compton $\lambda_C$.
 Exprimez cette relation sous la forme la plus simplifiée possible. On suppose que l'on est
 dans le référentiel du centre de masse du système.
@@ -102,17 +150,31 @@ dans le référentiel du centre de masse du système.
     \end{align*}
 \end{tcolorbox}
 
-\newpage
 
-\paragraph*{Question D} Considérons un atome ayant un diamètre de 1 \AA , et un électron qui se trouve à l'intérieur de l'atome.\\
-(a) Calculez l'incertitude minimale $\Delta p$ sur la quantité de mouvement de l'électron.\\
+\section*{Question D} Considérons un atome ayant un diamètre de 1 \AA , et un électron qui se trouve à l'intérieur de l'atome.\\
+\paragraph*{a)} Calculez l'incertitude minimale $\Delta p$ sur la quantité de mouvement de l'électron. \\\\
+Puisque nous savons que l'électron est à l'intérieur de l'atome, alors l'incertitude de la positon de l'électron est de 1\AA. 
 
+\begin{align*}
+    \Delta x = 1 \text{ \AA}
+\end{align*}
 
-(b) En supposant que $p \approx \Delta p$, calculez la vitesse et l'énergie cinétique de l'électron, et montrez
+Alors, trouvons l'incertitude minimale de la quantité de mouvement. 
+
+\begin{align*}
+    \Delta p_{min} &= \frac{\hbar}{2\Delta x} \\
+    \implies 
+    \Delta p_{min} &= \frac{\hbar}{2\Delta x} \\
+\end{align*}
+
+\paragraph*{b)} En supposant que $p \approx \Delta p$, calculez la vitesse et l'énergie cinétique de l'électron, et montrez
 que l'électron n'est pas relativiste.\\
-(c) Comparez l'énergie de l'électron aux énergies typiques d'ionisation des atomes. L'électron
+
+
+\paragraph*{c)} Comparez l'énergie de l'électron aux énergies typiques d'ionisation des atomes. L'électron
 est-il lié à l'atome?
 
+\section*{Question E}
 
 
 \end{document}
