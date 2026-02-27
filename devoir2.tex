@@ -53,27 +53,36 @@ résolution suffisante ? À quel type de lumière cela correspond-il ?
 \\\\    
 Pour répondre à cette question, nous pouvons simplement utiliser l'équation suivante de l'énergie d'un photon : 
 
-\begin{center}
-    $E = \frac{hc}{\lambda}$
-\end{center}
-
-Où "h" est la constante de Planck ($6,626*10^{-34}$Js), "c" est la constante de la vitesse de la lumière et "$\lambda$" est la longueur d'onde. Comme nous voulons une résolution de 0,1 \AA, nous devons utiliser ce nombre comme longueur d'onde. Avec ces données nous pouvons effectuer le calcul de l'énergie, ce qui nous donne : 
 \begin{align*}
-    E &= \frac{6,626*10^{-34}Js * 2,9979*10^{8}\frac{m}{s}}{1*10^{-11}m} = 1,9864*10^{-14}J
+    E = \frac{hc}{\lambda}
 \end{align*}
+
+Où "h" est la constante de Planck ($6,626*10^{-34}$Js), 
+"c" est la constante de la vitesse de la lumière et "$\lambda$" est la longueur 
+d'onde. Comme nous voulons une résolution de $0,1 \AA$, 
+nous devons utiliser ce nombre comme longueur d'onde. Avec ces 
+données nous pouvons effectuer le calcul de l'énergie, ce qui nous donne : 
+
+\begin{align*}
+    E &= \frac{\num{6.626e-34} \text{Js} \cdot \num{2.9979e8}\text{m/s}}{\num{1e-11}\text{m}} = \num{1.9864e-14} \text{J}
+\end{align*}
+
 \begin{tcolorbox}[tommy]
-Donc l'énergie qu'il faudrait à un photon pour résoudre notre image à la résolution voulue est de $1,9864*10^{-14}$J
+Donc l'énergie qu'il faudrait à un photon pour résoudre notre image à la résolution voulue est de $\num{1,9864e-14}$ J
 \end{tcolorbox}
 
+\vspace{1cm}
+
+
 \paragraph*{b)}
-Si on utilise un microscope électronique, quelle doit être l’énergie des électrons pour avoir
-une résolution suffisante ?
+Si on utilise un microscope électronique, quelle doit être l'énergie des électrons pour avoir
+une résolution suffisante?
 \\\\
 Pour résoudre cette image, nous devons utiliser la propriété ondulatoire des électrons avec la longueur d'onde de de Broglie qui va correspondre à notre longueur d'onde de 0,1 \AA. Cela va nous permettre d'obtenir la quantité de mouvement de notre électron et par la suite d'obtenir l'énergie de l'électron. Nous pouvons faire les calculs suivants pour obtenir la quantités de mouvement : 
 \begin{align*}
     \lambda &= \frac{h}{p}
   \\  p &= \frac{h}{\lambda}
-  \\ p &= \frac{6,626*10^{-34}Js}{1*10^{-11}m} = 6,626*10^{-23}Ns
+  \\ p &= \frac{\num{6.626e-34}\, Js}{\num{1e-11}\, m} = \num{6.626e-23}\, Ns
 \end{align*}
 
 Avec ce résultat, nous pouvons obtenir l'énergie de l'électron à l'aide de la formule suivante : 
@@ -81,17 +90,22 @@ Avec ce résultat, nous pouvons obtenir l'énergie de l'électron à l'aide de l
 \begin{align*}
     E^2 &= p^2c^2 + m_e^2c^4
 \\    E &= \sqrt{p^2c^2 + m_e^2c^4}
-\\ E&=\sqrt{(6,626*10^{-23}Ns)^2(2,9979*10^{8}\frac{m}{s})^2 + (9,10938*10^{-31}kg)^2(2,9979*10^{8}\frac{m}{s})^4}
-\\E &= 7,097*10^{-27} J
+\\ E&=\sqrt{(\num{6.626e-23}\, Ns)^2(\num{2.9979e8}\frac{m}{s})^2 + (\num{9.10938e-31}\, kg)^2(\num{2.9979e8}\frac{m}{s})^4}
+\\E &= \num{7.097e-27} J
 \end{align*}
 \begin{tcolorbox}[tommy]
-Donc l'énergie de l'électron est de $7,097*10^{-27}$ J.
+Donc l'énergie de l'électron est de $\num{7.097e-27}\,$J.
 \end{tcolorbox}
+
+\vspace{1cm}
+
 \paragraph*{c)}
 Lequel des deux choix est le plus pratique, et pourquoi ?
 \begin{tcolorbox}[tommy]
 Le choix le plus pratique serai le photon car il demande beaucoup moins d'énergie que l'électron.
 \end{tcolorbox}
+
+\vspace{1cm}
 
 \section*{Question B}
 Voici les informations que nous avons :
@@ -138,7 +152,7 @@ Maintenant, calculons la probabilité $P$.
 
 \vspace{1cm}
 
-\section*{Question C} Un électron et un positron relativistes se rencontrent pour s'annihiler et produire deux photons. Montrez qu’il existe une relation entre la longueur d’onde de de Broglie $\lambda_e$ de l’electron
+\section*{Question C} Un électron et un positron relativistes se rencontrent pour s'annihiler et produire deux photons. Montrez qu'il existe une relation entre la longueur d'onde de de Broglie $\lambda_e$ de l'electron
 et du positron, la longueur d'onde $\lambda_\gamma$ des photons et la longueur d'onde de Compton $\lambda_C$.
 Exprimez cette relation sous la forme la plus simplifiée possible. On suppose que l'on est
 dans le référentiel du centre de masse du système.
@@ -151,30 +165,67 @@ dans le référentiel du centre de masse du système.
 \end{tcolorbox}
 
 
-\section*{Question D} Considérons un atome ayant un diamètre de 1 \AA , et un électron qui se trouve à l'intérieur de l'atome.\\
-\paragraph*{a)} Calculez l'incertitude minimale $\Delta p$ sur la quantité de mouvement de l'électron. \\\\
-Puisque nous savons que l'électron est à l'intérieur de l'atome, alors l'incertitude de la positon de l'électron est de 1\AA. 
+\section*{Question D}
+Considérons un atome ayant un diamètre de 1 Å, et un électron qui se trouve à l'intérieur de
+l'atome. 
+\paragraph*{a)} Calculez l'incertitude minimale $\Delta$ sur la quantité de mouvement de l'électron \\\\
+Selon le principe d'incertitude d'Heisenberg, le produit de l'incertitude de la quantité de mouvement avec l'incertitude de la position doit être plus grand que $\frac{\hslash}{2}$. Donc sachant que l'incertitude maximale de la positon ($\Delta x$) est la taille de l'atome, soit $10^{-10}$\, m donc :
 
 \begin{align*}
-    \Delta x = 1 \text{ \AA}
+    \frac{\hslash}{2} &= \Delta p \Delta x
+    \\ \frac{\hslash}{2} &= \Delta p \num{1e-10}
+    \\ \frac{\hslash}\num{2e-10} &= \Delta p
+    \\ \Delta p &= \num{5.2728e-25}\,\frac{km}{s}
 \end{align*}
 
-Alors, trouvons l'incertitude minimale de la quantité de mouvement. 
+\begin{tcolorbox}
+Donc l'incertitude minimale sur $\Delta p$ est de $\num{5.2728e-25} \frac{km}{s}$
+\end{tcolorbox} 
+
+\vspace{1cm}
+
+\paragraph*{b)}
+En supposant que $p \approx \Delta p$, calculez la vitesse et l'énergie cinétique de l’électron, et montrez
+que l'électron n'est pas relativiste.\\\\
+
+Nous savons que la vitesse est égale à la quantité de mouvement divisée par la masse et l'énergie cinétique est égale à la quantité de mouvement au carré divisée par deux fois la masse. Donc en sachant ça, nous pouvons les calculer :
+\begin{align*}
+v &= \frac{p}{m}
+\\ v&= \frac{\num{5.2728e-25}}{\num{9.10938e-31}} = 578 831.74 \, \frac{m}{s}
+\\ k&= \frac{p^2}{2m}
+\\ k&= \frac{(\num{5.2728e-25})^2}{2\cdot \num{9.10938e-31}} = \num{1.5278e-19}\,J
+\end{align*}
+\begin{tcolorbox}
+Donc la vitesse de l'électron est de $578 831.74\, \frac{m}{s} $, et son énergie est de $\num{1.5278e-19}\,J$. Bien que sa vitesse semble grande, elle est seulement égale à environ 0,19 pourcent de la vitesse de la lumière, ce qui n'est pas assez pour que l'électron soit relativiste.
+\end{tcolorbox}
+
+\vspace{1cm}
+
+\paragraph*{c)}
+Comparez l'énergie de l'électron aux énergies typiques d'ionisation des atomes. L'électron
+est-il lié à l'atome ? \\\\
+Nous savons que l'énergie d'ionisation des atomes varient de 4 ev à 24 ev selon les atomes. Pour savoir si l'électron est lié, nous devons transformer son énergie de joules en électronvolt : 
 
 \begin{align*}
-    \Delta p_{min} &= \frac{\hbar}{2\Delta x} \\
-    \implies 
-    \Delta p_{min} &= \frac{\hbar}{2\Delta x} \\
+    \frac{E(j)}{\num{6.242e18}} &= E(eV)
+   \\ \frac{\num{1.5278e-19}}{\num{1.6022e-19}} &= 0,954\, eV
 \end{align*}
 
-\paragraph*{b)} En supposant que $p \approx \Delta p$, calculez la vitesse et l'énergie cinétique de l'électron, et montrez
-que l'électron n'est pas relativiste.\\
-
-
-\paragraph*{c)} Comparez l'énergie de l'électron aux énergies typiques d'ionisation des atomes. L'électron
-est-il lié à l'atome?
+\begin{tcolorbox}
+Donc l'énergie d'un électron est d'environ 0,954 ev, ce qui est inférieur à l'énergie de liaison des atomes ce qui démontre que l'électron est liée à l'atome.e ?
+\end{tcolorbox}
 
 \section*{Question E}
+Prenons les transitions 5-4, 4-3 et 3-1 qui sont respectivement, une transition de Brackett, une de Paschen et une de Lyman parce qu'elles permettent d'obtenir les photons avec les longueurs d'onde requises.\\\\
+Utilisons la loi de Rydberg pour trouver les longeurs d'onde des photons. 
 
+\begin{align*}
+    \frac{1}{\lambda} &=  R_H \left( \frac{1}{m^2} -  \frac{1}{n^2}  \right) 
+\end{align*}
+
+\begin{tcolorbox}
+    Les longueurs d'onde pour chaque photon sont donc les suivantes: 
+    $\lambda_{\text{IR}_1}=\num{4.874e-6}$ m, $\lambda_{\text{IR}_2}=\num{2.256e-6}$ m et $\lambda_{\text{UV}}=\num{1.23e-7}$ m. 
+\end{tcolorbox}
 
 \end{document}
